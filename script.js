@@ -1,5 +1,5 @@
 let currentIndex = 0;
-const images = ["../image/bb1.jpg", "../image/bb2.jpg", "../image/bb3.jpg", "../image/bb4.jpg", "../image/bb5.jpg", "../image/bb6.jpg", "../image/bb7.jpg", "../image/bb8.jpg"];
+const images = ["./bb1.jpg", "./bb2.jpg", "./bb3.jpg", "./bb4.jpg", "./bb5.jpg", "./bb6.jpg", "./bb7.jpg", "./bb8.jpg"];
 const messages = [
     " I LOVE YOUR SMILE ",
     " I LOVE YOUR LIPS AND EYES ",
@@ -33,7 +33,7 @@ function flipImage() {
                     Swal.fire({
                         title: "💖I Love You Forever 💖",
                         text: "You’ve seen all the messages po! I hope you felt the love. \ Balik ka na bab hehe  💞",
-                        imageUrl: "../image/patrick.gif", // Replace with a cute image
+                        imageUrl: "./patrick.gif", // Replace with a cute image
                         imageWidth: 150,
                         imageHeight: 150,
                         background: "#C2B280",
@@ -51,7 +51,7 @@ function flipImage() {
                         Swal.fire({
                             title: "💌 A Special Message for You 💌",
                             html: "<p style='font-size: 18px; color:rgb(0, 0, 0);'>From the moment I met you, my life changed forever. Every moment with you is magical, and I cherish every second by your side. Sorry ulit sa mga pagkukulang ko. Sana bumalik na tayo sa dati, sana maging okay na lahat. If may hindi ka pa nasasabi about sakin o sama ng loob, p'wede mong sabihin sa akin. This will serve as a lesson for me na gawin yung best ko araw araw. tama ka nga nmn wala akong pera nung time na iyon pero dapat gumawa ako ng paraan para makabawi sa'yo like mga letter and DIY gifts. I want you back babs, I want to be with you again. I LOVE YOU SO MUCH 💞</p>",
-                            imageUrl: "../image/me.gif", // Replace with a romantic image
+                            imageUrl: "./me.gif", // Replace with a romantic image
                             imageWidth: 300,
                             imageHeight: 300,
                             background: "#C2B280",
@@ -74,7 +74,7 @@ function flipImage() {
 
 // Function to play music on page load
 function playMusic() {
-    let audio = new Audio("../audio/palagi.mp3"); // Replace with your song file
+    let audio = new Audio("./Palagi.mp3"); // Replace with your song file
     audio.loop = true; // Loop the music
     audio.play().catch(error => console.log("Autoplay blocked, requires user interaction."));
 }
