@@ -5,7 +5,7 @@ header {
     padding: 0; /* Remove default padding */
 }
 body {
-    background: url("./kami.jpg") repeat 0 0; /* Set the background image */
+    background: url("./assets/image/kami.jpg") repeat 0 0; /* Set the background image */
     background-size: contain; /* Cover the entire viewport */
     background-position: center; /* Center the image */
     display: flex;
