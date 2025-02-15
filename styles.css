@@ -1,0 +1,134 @@
+header {
+    font-family: 'Roboto', sans-serif; /* Set the font for the body */
+    color: #000000; /* Dark text color for readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+body {
+    background: url("../image/Kami.jpg") repeat 0 0; /* Set the background image */
+    background-size: contain; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center; /* Center-align text in the header */
+    padding: 40px; /* Add padding around the header */
+    position: relative; /* Positioning context for child elements */
+}
+p {
+    font-family:'Great Vibes' normal;
+    color: #000000;
+    font-size: 2.1em ;
+    text-shadow: 6px 10px 9px rgba(255, 255, 255, 0.5);
+
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive; /* Decorative font for the main title */
+    color: #0c0c0c; /* Dark pink color for the title */
+    font-size: 3.01em; /* Font size for the title */
+    text-shadow: 6px 8px 9px rgba(204, 204, 204, 0.5); /* Shadow effect */
+}
+
+h2 {
+    text-align: center;
+    color: #C2B280; /* Dark pink color for section titles */
+    font-size: 2.0em;
+}
+
+
+/* Flip Card Container */
+.flip-container {
+    width: 320px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Flipper: Keeps card aligned */
+.flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Front & Back: Ensure Centering */
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Front Side: Center Image */
+.front img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Back Side: Center Text */
+.back {
+    background: #C2B280;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Flip Effect */
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+/* Heart Animation */
+.heart {
+    font-size: 40px;
+    animation: heartbeat 1.5s infinite;
+    margin-top: 15px;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .flip-container {
+        width: 280px;
+        height: 350px;
+    }
+
+    .back {
+        font-size: 18px;
+    }
+
+    .heart {
+        font-size: 30px;
+    }
+}
